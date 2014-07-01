@@ -16,14 +16,14 @@ public class MapPane extends Activity {
         GoogleMap map = ((MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map)).getMap();
 
-        LatLng sydney = new LatLng(-33.867, 151.206);
+        LatLng rhs = new LatLng(41.326162, -73.530727);
 
         map.setMyLocationEnabled(true);
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(rhs, 13));
 
         map.addMarker(new MarkerOptions()
-                .title("Sydney")
-                .snippet("The most populous city in Australia.")
-                .position(sydney));
+                .title("Ridgefield High School")
+                .snippet("This is the student center")
+                .position(rhs));
     }
 }
